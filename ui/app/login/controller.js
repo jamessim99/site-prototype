@@ -5,7 +5,7 @@ export default Ember.Controller.extend({
 
   actions: {
     authenticate(){
-      this.get('session').authenticate('authenticator:devise', this.get('email'), this.get('password'));
+      this.get('session').authenticate('authenticator:devise', this.get('identification'), this.get('password'));
     }
   }
 });
