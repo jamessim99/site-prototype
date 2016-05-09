@@ -8,12 +8,17 @@ gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 
-# encryption for passwords
-gem 'bcrypt',               '3.1.7'
-
 # flexible authentication solution for Rails based on Warden
-gem 'devise'
+# gem 'devise'
 
+# devise doesn't have token authentication so using devise_token_auth instead
+gem 'devise_token_auth'
+gem 'omniauth'
+gem 'omniauth-facebook'
+# gem 'omniauth-twitter'
+# gem 'omniauth-google-oauth2'
+# gem 'omniauth-linkedin'
+# gem 'omniauth-github'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.0'
