@@ -4,8 +4,11 @@ export default Ember.Controller.extend({
   session: Ember.inject.service('session'),
 
   actions: {
-    authenticate(){
-      this.get('session').authenticate('authenticator:devise', this.get('identification'), this.get('password'));
+    authenticate() {
+      let { identification, password } = this.getProperties('identification', 'password');
+      this.get('session').authenticate('authenticator:devise', identification, password).catch((reason) => {
+        alert('Error Message: ' + reason.errors.concat());
+      });
     }
   }
 });

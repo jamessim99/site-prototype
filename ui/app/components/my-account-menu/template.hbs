@@ -1,1 +1,7 @@
-{{yield}}
+<ul class="nav nav-tabs">
+    <li>{{#link-to "my-events"}}My Events{{/link-to}}</li>
+    <li>{{#link-to "my-cliques"}}My Cliques{{/link-to}}</li>
+    <li>{{#link-to "find-a-game"}}Fine a game{{/link-to}}</li>
+    <li><a {{action 'invalidateSession'}}>Logout</a></li>
+    <li>{{#link-to "my-account"}}Account{{/link-to}}</li>
+</ul>

@@ -1,0 +1,16 @@
+@import "bootstrap";
+
+footer, header {
+  background-color: darkgray;
+  a {
+    color: white;
+  }
+}
+
+#page-content{
+  padding: 20px;
+}
+
+header h1 {
+  color: white;
+}
