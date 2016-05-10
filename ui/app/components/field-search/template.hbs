@@ -1,1 +1,31 @@
-{{yield}}
+<form class="find-fields row">
+  <fieldset class="form-inline col-xs-3">
+    <div>
+      {{input type="checkbox" class="form-control" name="baseball"}}
+      <label>Baseball</label>
+    </div>
+    <div>
+      {{input type="checkbox" class="form-control" name="soccer"}}
+      <label>Soccer</label>
+    </div>
+    <div>
+      {{input type="checkbox" class="form-control" name="volleyball"}}
+      <label>Volleyball</label>
+    </div>
+    <div>
+      {{input type="checkbox" class="form-control" name="basketball"}}
+      <label>Basketball</label>
+    </div>
+  </fieldset>
+  <fieldset class="form-inline col-xs-9">
+    <label>Zip Code</label>
+
+    {{input type="text" class="form-control" value=location}}
+    <button type="button" class="btn btn-primary" {{action "findFields"}}>
+      Go!
+    </button>
+  </fieldset>
+  <div class="field-list col-xs-12">
+    {{ember-jstree data=treeData plugins=plugins themes=themes}}
+  </div>
+</form>

@@ -1,16 +1,36 @@
 @import "bootstrap";
 
-footer, header {
-  background-color: darkgray;
-  a {
+body{
+  background-color: $gray-dark;
+}
+
+header {
+  h1, a {
     color: white;
   }
 }
 
 #page-content{
   padding: 20px;
+  background-color: white;
 }
 
-header h1 {
-  color: white;
+footer {
+  border-top: 2px $gray-darker;
+  border-bottom: 2px $gray-darker;
 }
+
+.find-fields {
+  margin: 10px;
+  padding: 10px;
+
+  .field-list {
+    border: 1px solid $gray-dark;
+    margin-top: 10px;
+    padding: 20px;
+    max-height: 200px;
+    overflow-y: auto;
+    overflow-x: auto;
+  }
+}
+

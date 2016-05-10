@@ -2,13 +2,9 @@
   <h1 id="title">Title of Site</h1>
   <nav>
     {{#if session.isAuthenticated}}
-      {{my-account-menu}}
+      {{my-account-menu  invalidateSession='invalidateSession'}}
     {{else}}
-      {{#if session.isAuthenticated}}
-        <a {{action 'invalidateSession'}}>Logout</a>
-      {{else}}
-        {{#link-to 'login'}}Login{{/link-to}}
-      {{/if}}
+      {{site-menu}}
     {{/if}}
   </nav>
 </header>

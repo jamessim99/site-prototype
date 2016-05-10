@@ -6,9 +6,10 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('about', { path: '/' });
+  this.route('about');
   this.route('login');
   this.route('protected');
-  this.route('about');
   this.route('privacy');
   this.route('welcome');
   this.route('my-events');
